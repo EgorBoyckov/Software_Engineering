@@ -25,6 +25,7 @@
 
 Работу проверили:
 - к.э.н., доцент Панов М.А.
+![Pasted image 20240910221845](https://github.com/user-attachments/assets/d0cf19c3-dae0-4640-afaf-b21d6dceb392)
 
 ## Лабораторная работа №1
 ###  Установка
