@@ -28,7 +28,7 @@
 
 ## Лабораторная работа №1
 ###  Установка
-https://github.com/EgorBoyckov/Software_Engineering/blob/8931181268fe26efe43f27e8c5b11bd532d68eac/pc/Pasted%20image%2020240910221845.png
+{pc/Pasted image 20240910221845.png}
 ## Лабораторная работа №2
 ###  Настройка
 
