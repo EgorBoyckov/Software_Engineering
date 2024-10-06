@@ -1,8 +1,4 @@
-for i in range(10):
-    print( "i=" , i)
-    if i == 8:
-        break
-    elif i == 3:
-        continue
-    elif i == 4  or i ==5:
-        print("4 or 5")
+def use(a):
+    return max(a) / len(a)
+
+print(use([23,45,8,247,89,2,1,11,1,15656]))

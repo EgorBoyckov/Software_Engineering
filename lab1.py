@@ -1,5 +1,3 @@
-a, b = int(input()), int(input())
-if a == b:
-    print("Выполняется")
-else:
-    print("Не выполняется")
+a = {1,2,3,4}
+b ={1,2,5,6}
+print(a - b)
