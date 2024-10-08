@@ -1,8 +1,5 @@
-s = "Егор"
-x = input()
-for i in s:
-    if i == x:
-        print (f"символ {x} есть в строке")
-        break
-else:
-    print("нету в строке")
+super = ["batman", "Ladybug", "spider-man"]
+P, M, I =super
+print("Петя ", P)
+print("Маша", M)
+print("Иван ", I) 

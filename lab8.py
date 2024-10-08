@@ -1,9 +1,9 @@
-x= 4
-while(-12 < x <=256):
-    if (x % 2 == 0 ):
-        x*=2
-    elif(x > 30):
-        x//=2
-        x+=2
-    else: x+=13
-    print(x)
+from random  import randint
+def list_Rand():
+    a = [randint(1,100)*randint(3,10)]
+    return a
+if __name__ == "__main__":
+    result =[]
+    for i in range(1,5):
+        result.append(list_Rand())
+    print(result)
