@@ -1,10 +1,11 @@
-x = int(input())
-if 0 <= x <= 10:
-    if 0 <= x <= 3:
-        print("от 0 до 3 включительно")
-    elif 3 < x < 6:
-        print("от 3 до 6")
-    elif 6 <= x <= 10:
-        print("от 6 до 10 включительно")
-else:
-    print('стоп')
+import math
+one = [12, 25, 3, 48, 71]
+two = [5, 18, 40, 62, 98]
+three = [4, 21, 37, 56, 84]
+def P(a,b,c):
+    x =(a + b + c) / 2
+    return math.sqrt(x * (x - a) * (x - b) * (x - c))
+MAX = P(max(one),max(two),max(three))
+MIN = P(min(one),min(two),min(three))
+print(MAX)
+print(MIN)
