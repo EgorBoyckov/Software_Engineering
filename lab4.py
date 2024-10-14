@@ -1,2 +1,8 @@
-x = [123,4546,6757,57,65487,58,75687,8,79,9,89,89,45,45]
-print(x[2:6])
+def func(name, age, comp = 'unnamed'):
+    print(f"Имя: {name}. Возраст: {age}. Место работы: {comp}.")
+
+user1 = ("Вася", 12)
+func(*user1)
+
+user2 = ("Егор", 21, "Yandex")
+func(*user2)

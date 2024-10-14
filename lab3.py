@@ -1,3 +1,4 @@
-x = [1,2,3,4,5,6]
-x[0],x [-1]= x[-1],x[0]
-print(x)
+input_string = 'HelloWorld'
+result = tuple(input_string)
+print(result)
+print(list(result))

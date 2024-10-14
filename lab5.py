@@ -1,4 +1,9 @@
-def use(a):
-    return max(a) / len(a)
+def func(tpl):
+    for elem in tpl:
+        if not isinstance(elem, int):
+            return tpl
+    return tuple(sorted(tpl))
 
-print(use([23,45,8,247,89,2,1,11,1,15656]))
+if __name__ == '__main__':
+    print(func((1,3,5,24,113)))
+    print(func((5,32,1,4, '2', 3)))
