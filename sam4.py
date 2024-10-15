@@ -1,16 +1,16 @@
-x = [2, 3, 4, 5, 3, 4, 5, 2, 2, 5, 3, 4, 3, 5, 4]
-y = [4, 2, 3, 5, 3, 5, 4, 2, 2, 5, 4, 3, 5, 3, 4]
-z = [5, 4, 3, 3, 4, 3, 3, 5, 5, 3, 3, 3, 3, 4, 4]
-def F(a):
-    i =0
-    while i < len(a):
-        if  a[i] == 2:
-            a.pop(i)
-            i-=1
-        elif a[i] == 3:
-            a[i] = 4
-        i+=1
-    return a
-print(F(x))
-print(F(y))
-print(F(z))
+def V(arr, a):
+    flag = True
+    if a in arr:
+        for i in arr:
+            if i == a and flag:
+                start = arr.index(i)
+                flag =False
+            elif i ==a and flag == False:
+                end = arr.index(i)+1
+                break
+            else: end = arr.index(i)+1
+    else: return ()
+    return arr[start:end]
+print(V((1, 2, 3), 8))
+print(V((1, 8, 3, 4, 8, 8, 9, 2), 8))
+print(V((1, 2, 8, 5, 1, 2, 9), 8))
