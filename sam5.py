@@ -1,16 +1,5 @@
-a = [1, 1, 3, 3, 1]
-b = [5, 5, 5, 5, 5, 5, 5]
-c = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
-def F(lst):
-    R = set()
-    for number in lst:
-        count = lst.count(number)
-        if count > 1:
-            R.add(str(number) * count)
-            for i in range(2, count):
-                R.add(str(number) * i)
-        R.add(number)
-    return R
-print(F(a))
-print(F(b))
-print(F(c))
+x = ([1,2,3],[123,65,3])
+x[0].append(-5)
+x[1].remove(123)
+print(x)
+

@@ -1,14 +1,14 @@
 def V(arr, a):
     flag = True
     if a in arr:
-        for i in arr:
-            if i == a and flag:
-                start = arr.index(i)
+        for i in range(len(arr)):
+            if arr[i] == a and flag:
+                start = i
                 flag =False
-            elif i ==a and flag == False:
-                end = arr.index(i)+1
+            elif arr[i] ==a and flag == False:
+                end = i+1
                 break
-            else: end = arr.index(i)+1
+            elif arr[i] == arr[-1]:end = i+1
     else: return ()
     return arr[start:end]
 print(V((1, 2, 3), 8))
