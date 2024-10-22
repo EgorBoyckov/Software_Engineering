@@ -1,11 +1,13 @@
-a = input()
+def countW(file):
 
-def count_num(a):
-    
-    x ={}
-    for i in range(9):
-        n = a.count(str(i))
-        x [i] = n
-    x = sorted(x.items(), key = lambda item: item[1], reverse =True)
-    return x[:3]
-print(count_num(a))
+    with open(file, 'r', encoding='utf-8') as f:
+        text = f.read()
+
+    lines = text.count('\n') + 1
+    words = len(text.split())
+    letters = sum(1 for char in text if char.isalpha())
+    print(lines)
+    print(words)
+    print(letters)
+
+countW('13.txt')

@@ -1,5 +1,12 @@
-x = ([1,2,3],[123,65,3])
-x[0].append(-5)
-x[1].remove(123)
-print(x)
-
+def mathAnimal(f):
+    with open(f, "r", encoding="utf-8") as f:
+        t = f.read()
+        w = t.split()
+        collection = {}
+        for i in w:
+            if i in collection:
+                    collection[i] += 1
+            else:
+                    collection[i] = 1
+    return max(collection)
+print(mathAnimal("15.txt"))
