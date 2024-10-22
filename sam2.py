@@ -1,13 +1,10 @@
-def del_num(arr, num):
-    s =[]
-    flag = True
-    for i in range(len(arr)):
-        if arr[i] == num and flag:
-            flag =False
-        else:
-            s.append(arr[i])
-    return tuple(s)
-
-print(del_num((1, 2, 3), 1))
-print(del_num((1, 2, 3, 1, 2, 3, 4, 5, 2, 3, 4, 2, 4, 2), 3))
-print(del_num((2, 4, 6, 6, 4, 2), 9))
+while True:
+    print ("1 ввести данные о расходах 2 вывести данные о расходах")
+    i = int(input())
+    if i == 1:
+        with open("buget.txt", 'a', encoding = 'utf-8') as f:
+            f.write(input()+"\n")
+    elif i ==2:
+        with open('buget.txt', 'r', encoding = 'utf-8') as file:
+            for line in file:
+                print(line)
