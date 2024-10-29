@@ -1,12 +1,20 @@
-def mathAnimal(f):
-    with open(f, "r", encoding="utf-8") as f:
-        t = f.read()
-        w = t.split()
-        collection = {}
-        for i in w:
-            if i in collection:
-                    collection[i] += 1
-            else:
-                    collection[i] = 1
-    return max(collection)
-print(mathAnimal("15.txt"))
+class Animal:
+    def __init__(self,name, zzz):
+        self._name = name
+        self.__zzz = zzz
+    def sayName(self):
+        print(f"Меня ховут {self._name}")
+    def sound(self):
+        print(self.__zzz)
+    def go(self):
+        print("топ топ")
+class dog(Animal):
+    def __init__(self,name,zzz):
+        super().__init__(name,zzz)
+    def go(self):
+        print("прыг скок")
+        
+M = Animal("Корова","муму")
+D = dog("Собака", "гав гав")
+D.sound()
+D.go()

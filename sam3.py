@@ -1,13 +1,17 @@
-def countW(file):
-
-    with open(file, 'r', encoding='utf-8') as f:
-        text = f.read()
-
-    lines = text.count('\n') + 1
-    words = len(text.split())
-    letters = sum(1 for char in text if char.isalpha())
-    print(lines)
-    print(words)
-    print(letters)
-
-countW('13.txt')
+class Animal:
+    def __init__(self,name, zzz):
+        self.name = name
+        self.zzz = zzz
+    def sayName(self):
+        print(f"Меня ховут {self.name}")
+    def sound(self):
+        print(self.zzz)
+    def go(self):
+        print("топ топ")
+class dog(Animal):
+    def __init__(self,name,zzz):
+        super().__init__(name,zzz)
+        
+M = Animal("Корова","муму")
+D = dog("Собака", "гав гав")
+D.sound()
