@@ -1,15 +1,19 @@
-# Определение класса Car, представляющего автомобиль
-class Car:
-    # Инициализация объекта класса Car с атрибутами make и model
-    def __init__(self, make, model):
-        self.make = make  # Марка автомобиля
-        self.model = model  # Модель автомобиля
+class Icecream:
+    def __init__(self, ingredient=None):
+        if isinstance(ingredient, str):
+            self.ingredient = ingredient
+        else:
+            self.ingredient = None
 
-    # Метод drive, который выводит сообщение о том, что автомобиль едет
-    def drive(self):
-        print(f"Driving the {self.make} {self.model}")  # Вывод информации о марке и модели автомобиля
+    def composition(self):
+        if self.ingredient:
+            print(f"Мороженое с {self.ingredient}")
+        else:
+            print('Обычное мороженое')
 
-# Создание объекта класса Car с маркой "mak" и моделью "III"
-my_car = Car("mak", "III")
-# Вызов метода drive для объекта my_car
-my_car.drive()
+icecream = Icecream()
+icecream.composition()
+icecream = Icecream('шоколадом')
+icecream.composition()
+icecream = Icecream(313)
+icecream.composition()

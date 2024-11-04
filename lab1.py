@@ -1,10 +1,15 @@
-#Создание класса Car
-class Car:
-    #Метод инициализации класса
-    def __init__(self, make, model):
-        #Присваивание параметров make и model атрибутам экземпляра
-        self.make = make
-        self.model = model
+class Ivan:
+    __slots__ = ['name']
+    
+    def __init__(self, name):
+        if name == 'Иван':
+            self.name = f"Да, я {name}"
+        else:
+            self.name = f"Я не {name}, а Иван"
 
-#Создание экземпляра класса Car с производителем mak и моделью III
-car = Car("mak", "III")
+person1 = Ivan('Паша')
+person2 = Ivan('Иван')
+print(person1.name)
+print(person2.name)
+
+person2.surname = 'Иванов'
