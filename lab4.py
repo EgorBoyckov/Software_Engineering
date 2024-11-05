@@ -1,22 +1,15 @@
-# Определение класса Car, представляющего автомобиль
-class Car:
-    # Инициализация объекта класса Car с атрибутами make и model
-    def __init__(self, make, model):
-        self._make = make         # Защищённый (protected) атрибут make, доступен внутри класса и для наследников
-        self.__model = model      # Приватный (private) атрибут model, доступен только внутри этого класса
+class Mammal:
+    className = 'Mammal'
 
-    # Метод drive, который выводит сообщение о том, что автомобиль едет
-    def drive(self):
-        print(f"Driving the {self._make} {self.__model}")  # Доступ к защищённому и приватному атрибутам внутри класса
+class Dog(Mammal):
+    species = 'canine'
+    sounds = 'wow'
 
-# Создание объекта класса Car с маркой "mak" и моделью "II"
-my_car = Car("mak", "II")
+class Cat(Mammal):
+    species = 'feline'
+    sounds = 'meow'
 
-# Доступ к защищённому атрибуту _make вне класса допустим, но рекомендуется избегать его прямого изменения
-print(my_car._make)
-
-# Попытка доступа к приватному атрибуту __model вызовет ошибку, так как он скрыт от внешнего доступа
-# print(my_car.__model)  # Раскомментировав, получим ошибку AttributeError
-
-# Вызов метода drive для объекта my_car
-my_car.drive()
+dog = Dog()
+cat = Cat()
+print(f"Dog is {dog.className}, but they say {dog.sounds}")
+print(f"Cat is {cat.className}, but they say {cat.sounds}")
