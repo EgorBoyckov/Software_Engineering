@@ -1,15 +1,12 @@
-class Ivan:
-    __slots__ = ['name']
-    
-    def __init__(self, name):
-        if name == 'Иван':
-            self.name = f"Да, я {name}"
-        else:
-            self.name = f"Я не {name}, а Иван"
+from functools import lru_cache
 
-person1 = Ivan('Паша')
-person2 = Ivan('Иван')
-print(person1.name)
-print(person2.name)
+@lru_cache(None)
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
-person2.surname = 'Иванов'
+if __name__ == '__main__':
+    print(fibonacci(100))
