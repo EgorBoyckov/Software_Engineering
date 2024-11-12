@@ -1,17 +1,18 @@
-class Russian:
-    @staticmethod
-    def greeting():
-        print("Привет")
+class SiteChecker:
+    def __init__(self, func):
+        print('> Класс SiteChecker метод __init__ успешный запуск')
+        self.func = func
 
-class English:
-    @staticmethod
-    def greeting():
-        print("Hello")
+    def __call__(self):
+        print('> Проверка перед запуском', self.func.__name__)
+        self.func()
+        print('> Проверка безопасного выключения')
 
-def greet(language):
-    language.greeting()
+@SiteChecker
+def site():
+    print('Усердная работа сайта')
 
-Ivan = Russian()
-John = English()
-greet(Ivan)
-greet(John)
+if __name__ == '__main__':
+    print('>> Сайт запущен')
+    site()
+    print('>> Сайт выключен')
