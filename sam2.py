@@ -1,16 +1,12 @@
-class ZeroInputException(Exception):
-    pass
-def readFile(F):
-    try:
-        with open (F , "r") as file:
-            data = file.read()
-            if data == "":
-                raise ZeroInputException("Пустой файл")
-            print(data)
-    except ZeroInputException as e:
-        print(e)
+def fib(n):
+    a, b = 1, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
 
-if __name__ == '__main__':
-    readFile("input1.txt")
-    readFile("input2.txt")
-
+c = 1
+with open('fib.txt', 'w') as f:
+    for i in fib(222):
+        f.write(f"{i}\n")
+        print(c, i)
+        c += 1

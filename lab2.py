@@ -1,18 +1,17 @@
-def check(input_func):
-    def output_func(*args):
-        name, age = args[0], args[1]
+class CountDown:
+    def __init__(self, start):
+        self.count = start + 1
 
-        if age <= 0 or age >= 130:
-            age = 'Недопустимый возраст'
-        input_func(name, age)
+    def __iter__(self):
+        return self
 
-    return output_func
-
-@check
-def personal_info(name, age):
-    print(f"Name: {name} Age: {age}")
+    def __next__(self):
+        self.count -= 1
+        if self.count < 0:
+            raise StopIteration
+        return self.count
 
 if __name__ == '__main__':
-    personal_info('Саша', 20)
-    personal_info('Петя', -9)
-    personal_info('Ваня', 2,75,2)
+    counter = CountDown(5)
+    for i in counter:
+        print(i)
